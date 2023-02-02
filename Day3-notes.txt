@@ -1,0 +1,475 @@
+LISTS IN PYTHON:-
+  array can store elements of same data type only whereas list can store the different 
+data types. A list is an advanced array to store the elements
+1. ordered
+2. Changeable(can perform add,delete operations)
+3. allow duplicates
+
+example:
+>>>l=[1,2,3.4,"thiru"]
+>>>l
+[1, 2, 3.4, 'thiru']
+>>>type(l)
+<class 'list'>
+
+###INDEXING
+>>>l[2]
+3.4
+
+###SLICING---[start:end:step]
+>>>l[1:4]
+[2, 3.4, 'thiru']
+>>>l[1:7]
+[2, 3.4, 'thiru']
+>>>l[0:]
+[1, 2, 3.4, 'thiru']
+>>>l[:3]
+[1, 2, 3.4]
+>>>l[:5]
+[1, 2, 3.4, 'thiru']
+
+
+>>>l[::-1] #REVERSE
+['thiru', 3.4, 2, 1]
+
+>>>l[::-3]
+['thiru', 1]
+
+>>>l[::0]
+ValueError: slice step cannot be zero
+
+>>>l[::2]
+[1, 3.4]
+
+>>>l[::1]
+[1, 2, 3.4, 'thiru']
+
+>>>l[::-2]
+['thiru', 2]
+
+###SLICING IN LIST PREFERS FORWARD DIRECTION
+>>>l[-4:3]
+[1, 2, 3.4]
+>>>l[2:-4]
+[]
+>>>l[-2:0]
+[]
+>>>l[1:-1]
+[2, 3.4]
+--------------------------------------------------------------------------------------------
+###LIST METHODS#####
+
+###append(): adds one element at the end of the list-----l.append(-3)
+>>>l.append(-3)
+>>>l
+[1, 2, 3.4, 'thiru', -3]
+
+###extend(): adds multiple elements at a time-----l.extend([5,"sam"])
+>>>l.extend([5,"sam"])
+>>>l
+[1, 2, 3.4, 'thiru', -3, 5, 'sam']
+
+>>>l.extend([5,"thiru"])
+>>>l
+[1, 2, 3.4, 'thiru', -3, 5, 'sam', 5, 'thiru']
+
+###insert(): insert at a defined index-----l.index(index,number)
+>>>l.insert(3,567)
+>>>l
+[1, 2, 3.4, 567, 'thiru', -3, 5, 'sam', 5, 'thiru']
+
+###remove(): deletes the specified value----l.remove(number)
+>>>l.remove("thiru")
+>>>l
+[1, 2, 3.4, 567, -3, 5, 'sam', 5, 'thiru']
+
+>>>l.remove(2,3.4)
+TypeError: list.remove() takes exactly one argument (2 given)
+
+###pop():deletes the value in specified position----l.pop(index)
+>>>l.pop(5)-----gives the value at that position
+5
+
+>>>l
+[1, 2, 3.4, 567, -3, 'sam', 5, 'thiru']
+
+###sort(): sort the list in ascending order
+>>>l.sort()
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+>>>a=[34,12,567,23,90,8]
+>>>a.sort()
+>>>a
+[8, 12, 23, 34, 90, 567]
+
+>>>b=['hdfy','dft','ario','xcvbn']
+>>>b.sort()
+>>>b
+['ario', 'dft', 'hdfy', 'xcvbn']
+
+###count(): returns the count of a particular element
+>>>l.extend([2,2,5,13,67])
+>>>l
+[1, 2, 3.4, 567, -3, 'sam', 5, 'thiru', 2, 2, 5, 13, 67]
+
+>>>l.count(2)
+3
+
+###reverse(): returns the list in reverse order
+>>>l.reverse()
+>>>l
+[67, 13, 5, 2, 2, 'thiru', 5, 'sam', -3, 567, 3.4, 2, 1]
+
+###copy(): copy the existing list
+>>>l1=l.copy()
+>>>l1
+[67, 13, 5, 2, 2, 'thiru', 5, 'sam', -3, 567, 3.4, 2, 1]
+
+###clear(): returns a empty string
+>>>l1.clear()
+>>>l1
+[]
+
+>>>l1.insert(-4,"fdx") ### prints a element ahead
+>>>l1
+[67, 13, 5, 2, 2, 'thiru', 5, 'sam', -3, 'fdx', 567, 3.4, 2, 1]
+------------------------------------------------------------------------------------------------
+#LIST COMPREHENSION
+
+>>>l=[ele+ele for ele in "one two"]
+>>>print(l)
+['oo', 'nn', 'ee', '  ', 'tt', 'ww', 'oo']
+
+>>>l=[x**x for x in range(1,10)]
+>>>print(l)
+[1, 4, 27, 256, 3125, 46656, 823543, 16777216, 387420489]
+
+>>>l=[x for x in range(100,200,2)]
+>>>print(l)
+[100, 102, 104, 106, 108, 110, 112, 114, 116, 118, 120, 122, 124, 126, 128, 130, 132,
+ 134, 136, 138, 140, 142, 144, 146, 148, 150, 152, 154, 156, 158, 160, 162, 164, 166, 
+168, 170, 172, 174, 176, 178, 180, 182, 184, 186, 188, 190, 192, 194, 196, 198]
+
+>>>l=[x for x in range(10,50,2) if x<25]
+>>>print(l)
+[10, 12, 14, 16, 18, 20, 22, 24]
+
+s=["water","werty","qwedfr","vbjh","sfcb"]
+l=[]
+for i in s:
+    if "w" in i:
+        l.append(i)
+print(l)
+----->['water', 'werty', 'qwedfr']
+
+s=["water","werty","qwedfr","vbjh","sfcb"]
+l=[i for i in s if "w" in i]
+print(l)
+------>['water', 'werty', 'qwedfr']
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+#####SET#####
+1. Duplicates are not allowed
+2. Unordered
+3. No index
+4. Changeable(can perform add and delete operations)
+
+>>>s={1,2,1,2,4,3,2}
+>>>s
+{1, 2, 3, 4}
+
+>>>a={1.2,2,2,"a",1,1,3.3}
+>>>a
+{1.2, 2, 3.3, 1, 'a'}
+-------------------------------------------------------------------------------
+###SET METHODS
+#add(): adds an one element to the list
+>>>a.add("wer")
+>>>a
+{1.2, 2, 3.3, 1, 'wer', 'a'}
+>>>s.add(7)
+>>>s
+{1, 2, 3, 4, 7}
+
+#update(): adds more than one element
+>>>a.update({23,11,2.4})
+>>>a
+{1.2, 2, 3.3, 1, 2.4, 'wer', 11, 'a', 23}
+
+#discard() , remove(): Both are same but remove returns error if element is not in the list
+>>>a.discard(2)
+>>>a
+{1.2, 3.3, 1, 2.4, 'wer', 11, 'a', 23}
+
+>>>a.discard(2) # it does not returns the error
+>>>a
+{1.2, 3.3, 1, 2.4, 'wer', 11, 'a', 23}
+
+>>>a.remove('a')
+>>>a
+{1.2, 3.3, 1, 2.4, 'wer', 11, 23}
+
+>>>a.remove('a') # it returns key error
+KeyError: 'a'
+
+#POP():- removes the random element
+>>>a.pop()                
+1.2
+>>>a
+{3.3, 1, 2.4, 23, 11, 'wer'}
+
+#CLEAR():- returns empty set
+>>>a.clear()
+>>>a
+set()
+
+#COPY():-
+>>>s={1,2.3,11,2,1,2,4.5,11}
+>>>s                
+{1, 2.3, 2, 4.5, 11}
+>>>s1=s.copy()                
+>>>s1                
+{1, 2.3, 2, 4.5, 11}
+
+----------------------------------------------------------------------------------------------
+UNION():
+s1={1,3,2,45,23}
+s2={45,23,1,67,90}
+s1.union(s2) ###or s1|s2
+{1, 2, 3, 67, 45, 23, 90}
+
+INTERSECTION():
+s1.intersection(s2) ###or s1&s2
+{1, 45, 23}
+
+DIFFERENCE():
+s1.difference(s2) ### or s1-s2
+{2, 3}
+s2.difference(s1)
+{90, 67}
+
+ISSUPERSET(): check whether all the elements in s1 present in s2
+s1.issuperset(s2)
+--->False
+
+a={1,2,3}
+b={1,2,3,4}
+a.issuperset(b)
+False
+
+b.issuperset(a)
+True
+
+SYMMETRIC_DIFFERENCE(): returns the elements which are not common in s1 and s2
+s1.symmetric_difference(s2)
+{2, 67, 3, 90}
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+####TUPLE#####
+1. Ordered
+2. Unchangeble(Cannot remove or add elements)
+3. indexable
+4. Duplicates are allowed
+
+>>>t=1,2,3
+>>>t
+(1, 2, 3)
+
+>>>t=(1,3.4,223,"sam")
+>>>t
+(1, 3.4, 223, 'sam')
+>>>type(t)
+<class 'tuple'>
+
+>>>t=(1,2,3,1,2,56,4,5,56)
+>>>t
+(1, 2, 3, 1, 2, 56, 4, 5, 56)
+--------------------------------------------------------------------------------------------------
+###METHODS###
+count():
+>>>t.count(1)
+2
+
+index():
+>>>t[3]
+1
+>>>t.index(56) # gives the index of that number
+5
+>>>t.index(2)
+1
+
+#NESTED TUPLES
+>>>t1=(1,2,3)
+>>>t2=(1,3,4)
+>>>t3=(t1,t2)
+>>>t3
+((1, 2, 3), (1, 3, 4))
+
+        ##########CONVERSIONS##########
+
+#LIST TO TUPLE and SET:
+>>>l=[1,2,3]
+>>>t=tuple(l)
+>>>t
+(1, 2, 3)
+>>>s=set(l)
+>>>s
+{1, 2, 3}
+
+#TUPLE TO LIST and SET
+>>>t=(1,2,3)
+>>>l=list(t)
+>>>l
+[1, 2, 3]
+>>>s=set(t)
+>>>s
+{1, 2, 3}
+
+#SET TO LIST and TUPLE
+>>>s={1,2,3}
+>>>l=list(s)
+>>>l
+[1, 2, 3]
+>>>t=tuple(s)
+>>>t
+(1, 2, 3)
+
+----------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------
+####DICTIONARY####
+1. Unordered
+2. Changeable
+3. Indexed
+4. No duplicate members
+
+>>>d={1:'one',2:'two',3:'three'}
+>>>d
+{1: 'one', 2: 'two', 3: 'three'}
+>>>type(d)
+<class 'dict'>
+
+###ACCESSING
+>>>d[2]
+'two'
+>>>d.get(2)
+'two'
+----------------------------------------------------------------------------------
+###print the key values:-
+>>>d.keys()
+dict_keys([1, 2, 3])
+
+>>>for x in d.keys():
+    print(x)    
+1
+2
+3
+
+###print the value values:-
+>>>d.values()
+dict_values(['one', 'two', 'three'])
+
+>>>for x in d.values():
+    print(x)    
+one
+two
+three
+
+###print the items(both keys and values)
+>>>d.items()
+dict_items([(1, 'one'), (2, 'two'), (3, 'three')])
+
+>>>for x,y in d.items():
+    print(x,y)    
+1 one
+2 two
+3 three
+-------------------------------------------------------------------------------------------
+######SET,TUPLE,LIST,RANGE TO DICT########
+
+#WITH SET:-
+>>>S={2.3,1,3,"sam"}
+>>>d=dict.fromkeys(S)
+>>>d
+{3: None, 1: None, 2.3: None, 'sam': None}
+
+>>>d=dict.fromkeys(S,4)
+>>>d
+{3: 4, 1: 4, 2.3: 4, 'sam': 4}
+
+>>>d=dict.fromkeys(S,range(6))
+>>>d
+{3: range(0, 6), 1: range(0, 6), 2.3: range(0, 6), 'sam': range(0, 6)}
+
+>>>d=dict.fromkeys(S,(1,2,3))               
+>>>d               
+{3: (1, 2, 3), 1: (1, 2, 3), 2.3: (1, 2, 3), 'sam': (1, 2, 3)}
+
+#WITH TUPLE:-
+>>>t=(1,2.3,"wer",567)
+>>>d=dict.fromkeys(t)               
+>>>d               
+{1: None, 2.3: None, 'wer': None, 567: None}
+
+#WITH LIST:-
+>>>l=[23,4.56,"qwe"]                
+>>>d=dict.fromkeys(l)                	
+>>>d               
+{23: None, 4.56: None, 'qwe': None}
+
+#WITH RANGE:-
+>>>d=dict.fromkeys(range(1,5))                
+>>>d                
+{1: None, 2: None, 3: None, 4: None}
+-----------------------------------------------------------------------------------------------------
+###DICT METHODS###
+
+#UPDATE(): Add one or more items
+>>>d={1:'one',2:'two',3:'three'}                
+>>>d                
+{1: 'one', 2: 'two', 3: 'three'}
+>>>d.update({4:'four'})                
+>>>d                
+{1: 'one', 2: 'two', 3: 'three', 4: 'four'}
+>>>d.update({1:'one',7:'sam'})               
+>>>d                
+{1: 'one', 2: 'two', 3: 'three', 4: 'four', 7: 'sam'} # Duplicates are not allowed
+
+#ADD ELEMENTS WITH INDEX:-
+>>>d[8]=56                
+>>>d                
+{1: 'one', 2: 'two', 3: 'three', 4: 'four', 7: 'sam', 8: 56}
+
+#POP():- Remove the item------>d.pop(key) #gives the removed item
+>>>d.pop(3)               
+'three'
+>>>d                
+{1: 'one', 2: 'two', 4: 'four', 7: 'sam', 8: 56}
+
+#POPITEM():- Remove the recently added item
+>>>d.popitem()                
+(8, 56)
+>>>d               
+{1: 'one', 2: 'two', 4: 'four', 7: 'sam'}
+
+#SETDEFAULT():- If the key is not in dict- will be added or nothing will be done--->d.setdefault(key,value)
+#----------> it prints the value of that key
+>>>d.setdefault(3,9)                
+9
+>>>d                
+{1: 'one', 2: 'two', 4: 'four', 7: 'sam', 3: 9}
+>>>d.setdefault(2,"too")                
+'two'
+
+#COPY():-
+>>>d={1:'one',2:'two',3:'three'}                
+>>>d                
+{1: 'one', 2: 'two', 3: 'three'}
+>>>d1=d.copy()
+>>>d1
+{1: 'one', 2: 'two', 3: 'three'}
+
+
+
+
+

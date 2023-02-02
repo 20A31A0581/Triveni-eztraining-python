@@ -1,0 +1,218 @@
+***GUIDO VAN ROSSUM---->Founder of python from monty python flying circus
+***Python is famous in market and it is called as "language of future". it supports current technologies and upcoming technologies.
+***In c, we use ASCIICODES
+***In python,we use UNICODES(binary,octal,decimal,hexadecimal)
+***Program in python is called as "SCRIPT".
+***python is dynamically typed language(ex: x=100)
+-------------------------------------------------------------------------------------------------------------------
+###VALID SYNTAX
+1. _=100
+2. _3="str"
+3. sum=100
+4. sum_one=345
+5. g5=567
+
+###INVALID SYNTAX
+1.-=45
+2. 4d=567
+3. sum one=2345
+--------------------------------------------------------------------------------------------------------------
+###DATA TYPES
+1, Numerical data types
+   1. Integer
+   2. Float
+   3. complex
+2, Boolean--->True, False
+3, Sequence data types
+   1. String
+   2. List
+   3. Tuple
+   4. Dictionary
+4, Set
+5, None
+
+###EXAMPLES
+>>>type(23)
+<class 'int'>
+
+>>>type(345678)
+<class 'int'>
+
+>>>type(3.45)
+<class 'float'>
+
+>>>type(10+6j)
+<class 'complex'>
+
+>>>type(10+6i)
+SyntaxError: invalid decimal literal
+
+>>>type(True)
+<class 'bool'>
+
+>>>type(true)
+NameError: name 'true' is not defined. Did you mean: 'True'?
+
+>>>type('a')
+<class 'str'>
+
+>>>type([3,45,'fg'])    
+<class 'list'>
+
+>>>type(None)    
+<class 'NoneType'>
+----------------------------------------------------------------------------------------------------------------
+###TYPE CONVERSIONS###
+>>>bool(1)     
+True
+
+>>>float(45)     
+45.0
+
+>>>int(78.9)    
+78
+
+>>>set([2,4.5,'fgh'])
+{2, 4.5, 'fgh'}
+
+>>>tuple({2,567.9,'iuytds'})    
+(2, 'iuytds', 567.9)
+------------------------------------------------------------------------------------------------------------------
+###ID####----------> returns the stored location
+>>>id(5)
+140709746500520
+
+>>>id(5.8)     
+2386523687536
+
+>>>id("sam")    
+2386529436272
+
+>>>id([1,2,3])    
+2386529368384
+-------------------------------------------------------------------------------------------------------------------
+###ISINSTANCE###
+>>>isinstance(32,int)     
+True
+
+>>>isinstance(5.6,float)     
+True
+
+>>>isinstance(3,float)     
+False
+
+>>>isinstance(float(3),float)     
+True
+
+>>>isinstance({1,2,3.4},set)     
+True
+
+>>>isinstance("sam",str)    
+True
+----------------------------------------------------------------------------------------------------------------
+###OPERATORS PRECEDENCE AND ASSOCIATIVITY###
+every operator has its own priority, we use BODMAS rule
+All operators evaluates from "left to right" except assignment operator ,it evaluates from "right to left"
+ 
+>>>3*2+6/7-6     
+0.8571428571428568
+
+>>>3*2+9/7-31%2-7     
+-0.7142857142857144
+
+>>>54-3*6/7-(4+67)%3     
+49.42857142857143
+-------------------------------------------------------------------------------------------------------------------------
+   #####OPERATORS#####
+
+###ARTHMETIC OPERATORS###
+1. addition(+)
+2. Subtraction(-)
+3. Multiplication(*)
+4. Division(/)----returns the quotient as float
+5. Floor division(//)-----returns the quotient as int
+6. Modulus(%)----returns the remainder
+7. power(**)
+
+EXAMPLES
+>>>10/2     
+5.0
+
+>>>10//2    
+5
+
+>>>10/3    
+3.3333333333333335
+
+>>>10//3     
+3
+
+>>>34%7     
+6
+
+>>>3**4     
+81
+
+>>>pow(3,4)     
+81
+
+###LOGICAL OPERATORS###
+1. and
+2. or
+3. not
+
+EXAMPLES
+>>>True and False     
+False
+
+>>>10>5 or 2<1     
+True
+
+>>>not 5==3     
+True
+
+
+###RELATIONAL OR COMPARISION OPERATORS###
+>,<,>=,<=,==,!=
+
+EXAMPLES
+>>>a=43
+>>>b=32     
+>>>a>b     
+True
+
+>>>a<b     
+False
+
+>>>a>=b     
+True
+
+>>>a<=b     
+False
+
+>>>a==b     
+False
+
+>>>a!=b     
+True
+-----------------------------------------------------------------------------------------------------------------
+ ###MULTIPLE INPUTS IN SINGLE LINE
+
+#METHOD 1:--
+>>>n1,n2=int(input("enter:")),int(input("enter:"))     
+enter:3
+enter:4
+>>>type(n1)     
+<class 'int'>
+
+#METHOD 2:--
+>>>n1,n2=input("enter:").split()
+enter:2 3
+>>>type(n1)     
+<class 'str'>
+
+#METHOD 3:--
+>>>n1,n2=map(int,input("enter:").split(","))     
+enter:2,6
+>>>type(n2)    
+<class 'int'>
