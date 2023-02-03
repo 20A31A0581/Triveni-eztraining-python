@@ -1,0 +1,195 @@
+###DICTIONARY COMPREHENSION###
+------> CREATING NEW DICTIONARY FROM OLD DICTIONARY
+
+>>>d={n:n*n for n in range(1,10)}
+>>>d
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+>>>old={"rice":50,"dal":25,"oil":100}
+>>>new={item:price*2 for (item,price) in old.items()}
+>>>old
+{'rice': 50, 'dal': 25, 'oil': 100}
+>>>new
+{'rice': 100, 'dal': 50, 'oil': 200}
+
+###HOW TO PRINT 5 RANDOM NUMBERS###
+import random
+l1=[]
+for i in range(0,5):
+    n=random.randrange(1,100)
+    l1.append(n)
+print(l1)
+OUTPUT:--[50, 84, 26, 63, 87]
+
+------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
+#####STRINGS####
+
+>>>a="hi"
+>>>a
+'hi'
+
+>>>a='hi'
+>>>a
+'hi'
+
+>>>a="hi i'm"
+>>>a
+"hi i'm"
+
+>>>a='hi i'm'
+SyntaxError: unterminated string literal (detected at line 1)
+
+>>>a="hi i\'am"---->HERE WE USE \'
+>>>a
+"hi i'am"
+
+>>>a='hi i\'am'
+>>>a
+"hi i'am"
+------------------------------------------------------------------------------------------------------------------------
+###CONCATENATION and REPITITION###
+>>>s1="tri"
+>>>s2="veni"
+>>>s1+s2
+'triveni'
+>>>s1*3
+'tritritri'
+--------------------------------------------------------------------------------------------------------------------
+###FUNCTIONS###
+
+>>>s.upper()
+'HELLO WORLD'
+>>>s.lower()
+'hello world'
+>>>s.casefold()
+'hello world'
+>>>s.capitalize()
+'Hello world'
+>>>s.title()
+'Hello World'
+>>>s.replace("l","L")
+'heLLo worLd'
+>>>a="       hello    world   abc    "
+>>>a.strip()
+'hello    world   abc'
+>>>s.split()
+['hello', 'world']
+>>>A="Hello*wo*ld"
+>>>A.split("*")
+['Hello', 'wo', 'ld']
+>>>A.split("wo")        
+['Hello*', '*ld']
+>>>s.center(20,"*")        
+'****hello world*****'
+>>>s.count("l")
+3
+>>>s.count("h",5,len(s))
+0
+>>>s.startswith("h")
+True
+>>>s.startswith("h",3,len(s))
+False
+>>>s.endswith("D")
+False
+>>>s.endswith("d",7,len(s))
+True
+>>>s.find("l")------------> returns the index of first occurence of character
+2
+>>>s.find("h",3,len(s))
+-1
+>>>s.rfind("l")----------->returns the index of first occurence of character from the reverse
+9
+>>>s.rfind("h",3,len(s))
+-1
+>>>s.index("h")
+0
+>>>s.index("h",3,len(s))------> same as find function but it returns error if the character is not there
+ValueError: substring not found
+>>>s.islower()
+True
+>>>s.isupper()
+False
+>>>a="HELLO"
+>>>a.isupper()
+True
+>>>s.istitle()
+False
+>>>a="Hello World"
+>>>a.istitle()
+True
+>>>max(s)
+'w'
+>>>max('a','f')
+'f'
+>>>min(s)
+' '
+>>>min('a','&')
+'&'
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------
+###MUTABLE VS IMMUTABLE####
+
+mutable - changeable 
+              - list,set,dictionary
+
+immutable - unchangeable
+                 - int,float,string,tuple,bool
+
+>>>r=200
+>>>r
+200
+>>>id(r)
+140734817106952  // even if the value of a variable changes the address of every value is different
+>>>r=300               // and the address of the old value remains constant or same for that value
+>>>r
+300
+>>>id(r)
+1477085232624
+
+>>>l=[1,2,3]
+>>>id(l)
+1477090911360       //the address of the list remains same even if the contents of the list change
+>>>l.append(4)
+>>>l
+[1, 2, 3, 4]
+>>>id(l)
+1477090911360
+>>>l.clear()
+>>>l
+[]
+>>>id(l)
+1477090911360
+
+---------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
+####MATH MODULE####
+
+math.ceil()
+math.floor()
+math.sqrt()
+math.factorial()
+math.pow()
+math.fmod()
+divmod(a,b)
+
+>>>import math
+>>>math.ceil(12.5)
+13
+>>>math.floor(12.5)
+12
+>>>math.sqrt(144)
+12.0
+>>>math.factorial(4)
+24
+>>>math.pow(2,3)
+8.0
+>>>math.fmod(10,3)   // gives remainder
+1.0
+>>>divmod(10,3)   // gives quotient and remainder
+(3, 1)
+>>>divmod(9,3)
+(3, 0)
+
+
