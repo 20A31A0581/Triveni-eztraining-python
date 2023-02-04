@@ -1,0 +1,40 @@
+###EXCEPTION HANDLING
+when there is exception the developer does not want interruption or disturbance in the program flow,to achieve this we are using exception handling
+3 TYPES:
+   compile time error:--->syntax error
+   run time error----> infinite loop
+   logical error---->divided by zero
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+##OOPS (object-oriented programming structure)
+it an efficient concept use in all object oriented programming languages like java and python 
+for multiple reasons we use OOPS concept..
+for ex:
+1. code reusabilty
+2. data security
+3. hiding data 
+
+##CLASS:--
+ its a blueprint
+ ex:--birds,laptops,
+
+##OBJECTS:--
+ its a thing created based on class
+Note:--
+  one class can have multiple objects
+
+Example 1:
+ Class: birds
+ objects: parrot,crow,pigeon,dove
+
+Example 2:
+  class: laptop
+  object: HP,lenovo, Dell,Macbook
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+###Scope of the variable in the class and method
+1. The variables inside the class is called "instance variables"
+2. The instance variables is  alive throughout the program
+3. The variables which are inside the method is only accessed by its method only
+4. When we want to access the instance variables inside the method we use self.var-->like print(self.a)
+5. In the order of execution if object 1 is created it will ao=utomatically gives the print statement inside the class and it will not happen for object 2 
