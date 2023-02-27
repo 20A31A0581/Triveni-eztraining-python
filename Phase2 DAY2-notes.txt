@@ -1,0 +1,66 @@
+POLYMORPHISM:---
+one item or same item use for different purpose
+ TYPES:---
+ 1. Overloading
+    A. Operator Overloading
+    B. Method Overloading
+ 2. Overridding
+
+Operator Overloading:
+ Same opeartor is used for addition of numbers and strings
+ 5+10=15
+ "5"+"10"=510
+
+Method Oveloading
+ same method or functiuon is used for 2 or more parameters
+  add(2,5)
+  add(5,5,6)
+
+
+Overriding:--
+if a method is defective or cannot be used inside the derived class it will take it from 
+base class or parent class
+
+------------------------------------------------------------------------------------------------------
+DATA STRUCTURES:
+
+helps to write efficient programs
+ 1. LINEAR:--Storing data sequentially
+       array/ linked list/ stack/ queue/ matrix
+ 2. NON-LINEAR:--No sequential style required
+       Binary tree/ Heap/ Hash table/ Graph/ Sets
+
+STATIC(cannot be modified,sixe can be fixed)---Array
+DYNAMIC(they are flexible and size can be vary)---List, Stack, queue
+
+------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------
+LINKED LIST:--
+ Real time example: TRAIN
+
+As the name says ,list of items which are linked with one another is called as linked list.
+TYPES:--
+ 1. single linked list
+ 2. Double linked list
+ 3. Circular linked list
+ 
+every item is called as NODE
+every node has 2 parts i.e., DATA, ADDRESS
+
+CREATING LINKED LIST
+
+Step-1: Create the node
+Step-2: Partition  the node with 2 segments ---> data and None
+Step-3: Add value into the blank node
+Step-4: Mark the node as head
+Step-5: Create the next node by following the above steps
+Step-6: Establish the link between the first node and second node
+  
+DISPLAY LINKED LIST
+   Traversal is required from 1st node till tail node inorder to display the existing linked list
+
+OPERATIONS:---
+  1. INSERT
+     ---> Beginning
+     ---> End
+     ---> Position

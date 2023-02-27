@@ -1,0 +1,44 @@
+#LAMBDA FUNCTION
+Its called as anonymous function when we want to use function concept alone without using 
+function name there we apply concept of lamda function.
+EXAMPLE
+l=[1,2,3]
+r=list(map(lambda x:x+x,l))
+print(r)
+OUTPUT
+[2, 4, 6]
+
+-----------------------------------------------------------------------------------------
+
+PILLARS OF OOPS:
+Abstraction
+Inheritance
+Encapsulation
+Polymorphism
+
+1.Abstraction: Hiding the implementation part and showing what is required for the users 
+Example: .exe file in which we do not know what happens in that execution.
+
+We can make class or method as abstract, opposite to abstract is concrete which means that the 
+concrete class can be instantiated i.e object creation whereas the abstract class cannot be instantiated
+as its implementation is hidden.
+
+2.Encapsulation:Binding data and functions into a single entity.
+Types:
+->Public:one class info can be accessed to any other class
+->private:can used where it is declared / no in inherited class
+->protected:can be accessed only where it got declared which ever class is inherited from this class there also we can use.
+
+3.Inheritance:
+-->Base class and derived class.
+Derived class will inherit the properties of base class.
+Base class-Parent class
+Derived class-Child class
+
+Types:
+1.Single inheritance.
+2.Multiple inheritance.
+3.Multi level inheritance
+4.Hierarchical inheritance
+5.Hybrid inheritance
+
